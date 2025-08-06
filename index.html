@@ -6,23 +6,117 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    
-    <body>
-        <h1> About Me </h1>
+
+    </header>
+    <head>
+    <meta charset="UTF-8">
+    <title>Tabs Example</title>
+    <style>
+        /* Container for the tab buttons */
+        .tab-container {
+            display: flex;
+            background-color: #f1f1f1;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* Individual tab buttons */
+        .tab-button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 20px;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        .tab-button:hover {
+            background-color: #6d9572;
+        }
+
+        .tab-button.active {
+            background-color: #6d9572;
+        }
+
+        /* Content for each tab */
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tatum Andreoli Portfolio </h1>
+
+    <!-- Tabs -->
+    <div class="tab-container">
+        <button class="tab-button active" onclick="openTab(event, 'About')">About</button>
+        <button class="tab-button" onclick="openTab(event, 'Projects/Experiences')">Projects/Experiences</button>
+        <button class="tab-button" onclick="openTab(event, 'Contact')">Contact</button>
+    </div>
+
+    <!-- Tab contents -->
+    <div id="About" class="tab-content active">
+        <p><h1> About Me </h1>
         <div style="display: flex; align-items: center; justify-content: space-between;">
             <div style="flex: 1; text-align: left;">
-                <p> Hello! My name is Tatum Andreoli, and I am a Biological Engineering major at the University of Florida's Herbert Wertheim College of Engineering. I am interested in sustainable and biodegradable materials, with a specific focus on biomaterials.</p>
-                <p>Email: andreolit@ufl.edu</p>
-                <p>Phone: (425) 305 - 0695</p>
+                <p> Hello! My name is Tatum Andreoli, and I am currently a Biological Engineering undergraduate student at the University of Florida. I am interested in sustainable and biodegradable materials, with a specific focus on biomaterials. I am seeking opportunities to expand my knowledge through hands-on research, internships, industry experiences, and professional connections.</p>
+
         </div>
   <div style="flex: 0 0 auto;">
     <img src="me.jpg.jpg" height="300" alt="Picture of Tatum Andreoli">
   </div>
-</div>
-        <h2> Projects/Experiences </h2>
+</div></p>
+    </div></p>
+    </div>
+
+    <div id="Projects/Experiences" class="tab-content">
+        <h2> Projects</h2>
     </body>
     <p><strong>Small-Scale Soldering Circuit Boards</strong></p>
-    <p><strong>Successful Transition and Enhanced Preparation for Undergraduates (STEPUP) Mentee</strong> </p>
-    <p style="margin-left: 2em;">An initiative for first-year engineering students through the Herbert Wertheim College of Engineering. STEPUP provides an accelerated introduction to university life through academic enrichment, hands-on projects, and professional development. The program fosters a strong support network of mentors, faculty, and industry leaders, combining academic rigor with team-building experiences to build confidence and set the foundation for success in engineering.</p>
+    <p><strong>OnShape 3D Modeled Key Chain</strong></p>
+    <p><strong>Meta-analysis Discussing the Effects of Carbon-based Nanoparticles in the Treatment of Autoimmune Diseases</strong></p>
+    <h2>Experience</h2>
+    <p><p><strong>Successful Transition and Enhanced Preparation for Undergraduates (STEPUP) Mentee</strong> </p>
+    <p style="margin-left: 2em;">An initiative for first-year engineering students through the Herbert Wertheim College of Engineering. STEPUP provides an accelerated introduction to university life through academic enrichment, hands-on projects, and professional development. The program fosters a strong support network of mentors, faculty, and industry leaders, combining academic rigor with team-building experiences to build confidence and set the foundation for success in engineering.</p></p>
+    </div>
+
+    <div id="Contact" class="tab-content">
+        <h2>Contact</h2>
+        <p>Contact me at andreolit@ufl.edu</p>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Hide all tab content
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // Remove active class from all buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => button.classList.remove('active'));
+
+            // Show current tab and add active class to its button
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+    </script>
+
+</div>
+<footer>
+    <p>&copy; 2025 Tatum Andreoli</p>
+    <p>
+        <a href="andreolit@ufl.edu">andreolit@ufl.edu</a> |
+        <a href="andreolit.github.io" target="_blank">andreolit.github.io</a> |
+        <a href="www.linkedin.com/in/tatum-andreoli" target="_blank">www.linkedin.com/in/tatum-andreoli</a>
+    </p>
+</footer>
 </html>
 
