@@ -36,21 +36,29 @@ footer a:hover {
 }
 .tab-container {
     display: flex;
-    background-color: #f1f1f1;
+    width: 100vw;           /* full viewport width */
+    margin: 0;              /* remove default margins */
+    padding: 0;             /* remove default padding */
     border-bottom: 1px solid #ccc;
-    /* Add this: */
-    width: 100%;
+    background-color: #f1f1f1;
 }
 
 .tab-button {
-    background-color: inherit;
+    flex: 1;                /* make each button take equal width */
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 20px;
-    transition: background-color 0.3s;
+    padding: 14px 0;        /* vertical padding only */
     font-size: 16px;
+    background-color: inherit;
+    transition: background-color 0.3s;
+    text-align: center;     /* center the button text */
+}
 
-    flex: 1;           /* make each button take equal space */
-    text-align: center; /* center text inside button */
+.tab-button:hover {
+    background-color: #6d9572;
+}
+
+.tab-button.active {
+    background-color: #6d9572;
 }
